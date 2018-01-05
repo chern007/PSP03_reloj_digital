@@ -20,7 +20,7 @@ public class Reloj extends javax.swing.JFrame {
         initComponents();
     }
     
-     //Se crea una instancia de la interfaz events
+     //se crea una instancia de la interfaz "alarmEventListener"
     static alarmEventListener events = new alarmEventListener() {
 
         //Lo que va a suceder cada vez que se produzca un evento determinado
@@ -43,33 +43,28 @@ public class Reloj extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        relojDigital1 = new ejemplo_componentes.relojDigital();
-        jFormattedTextField1 = new javax.swing.JFormattedTextField();
+        componenteMiTextoBeanInfo1 = new misControles.ComponenteMiTextoBeanInfo();
+        relojDigital2 = new ejemplo_componentes.relojDigital();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jFormattedTextField1.setText("jFormattedTextField1");
-        jFormattedTextField1.setFont(new java.awt.Font("Dialog", 0, 36)); // NOI18N
+        relojDigital2.setAlarma1(???);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(24, 24, 24)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jFormattedTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(relojDigital1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(249, Short.MAX_VALUE))
+                .addContainerGap()
+                .addComponent(relojDigital2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(38, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(28, 28, 28)
-                .addComponent(relojDigital1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jFormattedTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(176, Short.MAX_VALUE))
+                .addContainerGap()
+                .addComponent(relojDigital2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(147, Short.MAX_VALUE))
         );
 
         pack();
@@ -111,14 +106,15 @@ public class Reloj extends javax.swing.JFrame {
                 miReloj.setVisible(true);
                 
                 //añadimos el oyente del evento
-                miReloj.relojDigital1.addEventListener(events);
+                miReloj.relojDigital2.addEventListener(events);
+                //miReloj.relojDigital1.setTipohora24(false);
                 
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JFormattedTextField jFormattedTextField1;
-    public ejemplo_componentes.relojDigital relojDigital1;
+    private misControles.ComponenteMiTextoBeanInfo componenteMiTextoBeanInfo1;
+    private ejemplo_componentes.relojDigital relojDigital2;
     // End of variables declaration//GEN-END:variables
 }
