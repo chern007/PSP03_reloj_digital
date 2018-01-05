@@ -5,6 +5,8 @@
  */
 package ejemplo_componentes;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author chern007
@@ -17,6 +19,20 @@ public class Reloj extends javax.swing.JFrame {
     public Reloj() {
         initComponents();
     }
+    
+     //Se crea una instancia de la interfaz events
+    static alarmEventListener events = new alarmEventListener() {
+
+        //Lo que va a suceder cada vez que se produzca un evento determinado
+        @Override
+        public void alarm(alarmEvent ev) {
+            //Mensaje que se imprime en consola al cambiar el ID
+            JOptionPane.showMessageDialog(null, "¡¡¡ALARMA!!!");
+            
+        }
+
+    };
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -27,33 +43,33 @@ public class Reloj extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        relojDigital1 = new ejemplo_componentes.relojDigital();
         jFormattedTextField1 = new javax.swing.JFormattedTextField();
-        relojDigital2 = new ejemplo_componentes.relojDigital();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jFormattedTextField1.setEditable(false);
         jFormattedTextField1.setText("jFormattedTextField1");
+        jFormattedTextField1.setFont(new java.awt.Font("Dialog", 0, 36)); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(55, 55, 55)
+                .addGap(24, 24, 24)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(relojDigital2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jFormattedTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(218, Short.MAX_VALUE))
+                    .addComponent(jFormattedTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(relojDigital1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(249, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(75, 75, 75)
-                .addComponent(jFormattedTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(relojDigital2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(121, Short.MAX_VALUE))
+                .addGap(28, 28, 28)
+                .addComponent(relojDigital1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jFormattedTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(176, Short.MAX_VALUE))
         );
 
         pack();
@@ -86,16 +102,23 @@ public class Reloj extends javax.swing.JFrame {
         }
         //</editor-fold>
 
+        
+        
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Reloj().setVisible(true);
+                Reloj miReloj = new Reloj();
+                miReloj.setVisible(true);
+                
+                //añadimos el oyente del evento
+                miReloj.relojDigital1.addEventListener(events);
+                
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JFormattedTextField jFormattedTextField1;
-    private ejemplo_componentes.relojDigital relojDigital2;
+    public ejemplo_componentes.relojDigital relojDigital1;
     // End of variables declaration//GEN-END:variables
 }
