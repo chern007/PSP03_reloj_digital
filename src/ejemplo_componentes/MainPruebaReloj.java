@@ -43,11 +43,11 @@ public class MainPruebaReloj extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        relojDigital2 = new ejemplo_componentes.relojDigital();
+        relojDigital1 = new ejemplo_componentes.relojDigital();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        relojDigital2.setAlarma1(new ejemplo_componentes.alarma(13, 4));
+        relojDigital1.setAlarma1(new ejemplo_componentes.alarma(0, 0));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -55,14 +55,14 @@ public class MainPruebaReloj extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(relojDigital2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(relojDigital1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(15, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(relojDigital2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(relojDigital1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(190, Short.MAX_VALUE))
         );
 
@@ -106,7 +106,7 @@ public class MainPruebaReloj extends javax.swing.JFrame {
                 miReloj.setVisible(true);
                 
                 //añadimos el oyente del evento
-                miReloj.relojDigital2.addEventListener(events);
+                miReloj.relojDigital1.addEventListener(events);
                 //miReloj.relojDigital1.setTipohora24(false);
                 
             }
@@ -114,6 +114,6 @@ public class MainPruebaReloj extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private ejemplo_componentes.relojDigital relojDigital2;
+    private ejemplo_componentes.relojDigital relojDigital1;
     // End of variables declaration//GEN-END:variables
 }
