@@ -16,6 +16,18 @@ public class alarma  implements Serializable{
     private int hora =0;
     private int minuto = 0;
 
+    public alarma() {
+    }  
+
+    public alarma(int hora, int minuto) {
+        
+     this.hora = hora;
+     this.minuto = minuto;
+        
+    }
+    
+    
+
     public int getHora() {
         return hora;
     }

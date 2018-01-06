@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
-  <NonVisualComponents>
-    <Component class="misControles.ComponenteMiTextoBeanInfo" name="componenteMiTextoBeanInfo1">
-    </Component>
-  </NonVisualComponents>
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
   </Properties>
@@ -30,7 +26,7 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Component id="relojDigital2" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="38" max="32767" attributes="0"/>
+              <EmptySpace pref="15" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -39,7 +35,7 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Component id="relojDigital2" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="147" max="32767" attributes="0"/>
+              <EmptySpace pref="190" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -48,7 +44,7 @@
     <Component class="ejemplo_componentes.relojDigital" name="relojDigital2">
       <Properties>
         <Property name="alarma1" type="ejemplo_componentes.alarma" editor="ejemplo_componentes.relojDigitalPropertyEditorSupport">
-          <SerializedValue value="-84,-19,0,5,115,114,0,26,101,106,101,109,112,108,111,95,99,111,109,112,111,110,101,110,116,101,115,46,97,108,97,114,109,97,-75,-124,68,-73,66,59,8,-85,2,0,2,73,0,4,104,111,114,97,73,0,6,109,105,110,117,116,111,120,112,0,0,0,17,0,0,0,16"/>
+          <SerializedValue value="-84,-19,0,5,115,114,0,26,101,106,101,109,112,108,111,95,99,111,109,112,111,110,101,110,116,101,115,46,97,108,97,114,109,97,63,21,16,4,-13,83,-45,-67,2,0,2,73,0,4,104,111,114,97,73,0,6,109,105,110,117,116,111,120,112,0,0,0,13,0,0,0,4"/>
         </Property>
       </Properties>
     </Component>

@@ -28,7 +28,10 @@ public class relojDigitalPropertyEditorSupport extends PropertyEditorSupport {
 
     @Override
     public String getJavaInitializationString() {
-        return super.getJavaInitializationString(); //To change body of generated methods, choose Tools | Templates.
+        
+    alarma miAlarma =  customPanel.getSelectedValue();        
+        
+        return "new ejemplo_componentes.alarma("+ miAlarma.getHora() +", "+miAlarma.getMinuto()+")"; //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
